@@ -1,0 +1,16 @@
+<form class="form-inline">
+    <div class="form-group">
+    <label for="wishlist">Add a Channel</label>
+    <input class="form-control" type="text" name="wishlist" id="wishlist" ng-model="dataWish" required>
+    <label for="purpose">Add a Purpose</label>
+    <input class="form-control" type="text" name="purpose" id="purpose" ng-model="dataPurpose" required>
+    <button class="btn btn-default" type="submit" ng-click="submit()">Submit your channel</button>
+    </div>
+    </form>
+<div class="row">
+    <div class="col-md-4">
+    <ul class="list-group"><!--using ng-repeat to loop over each wish in our wishes and display the name-->
+        <li class="list-group-item" ng-repeat="wish in wishes">Name: {{wish.name}}, Purpose: {{wish.purpose}}</li>
+    </ul>
+    </div>
+</div>
